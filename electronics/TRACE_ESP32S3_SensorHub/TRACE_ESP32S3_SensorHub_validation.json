@@ -1,0 +1,13 @@
+{
+  "file": "electronics/TRACE_ESP32S3_SensorHub/TRACE_ESP32S3_SensorHub.kicad_sch",
+  "components": 20,
+  "labels": 46,
+  "no_connects": 36,
+  "validation_issue_count": 0,
+  "issues": [],
+  "used_adc_pins": {
+    "GPIO4": "ADC1_CH3 / LIGHT_ADC",
+    "GPIO5": "ADC1_CH4 / FSR_ADC",
+    "GPIO6": "ADC1_CH5 / VIB_ADC"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "trace-enclosure",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node generate-stl.js",
+    "verify": "node verify-model.js"
+  }
+}

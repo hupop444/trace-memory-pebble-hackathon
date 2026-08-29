@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACE Three Sessions</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, "Microsoft YaHei", sans-serif;
+      color: #282521;
+      background: #ece9e4;
+      letter-spacing: 0;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 320px; background: #ece9e4; }
+    header {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 12px 24px;
+      border-bottom: 1px solid #cbc5bd;
+      background: #f7f5f2;
+    }
+    h1 { margin: 0; font-size: 20px; }
+    form { display: flex; gap: 8px; width: min(680px, 68vw); }
+    input, button { min-height: 40px; border: 1px solid #8b837a; border-radius: 6px; font: inherit; }
+    input { min-width: 0; flex: 1; padding: 0 12px; background: #fff; }
+    button { padding: 0 16px; background: #332e29; color: #fff; cursor: pointer; }
+    main {
+      min-height: calc(100vh - 72px);
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      align-items: start;
+      padding: 18px;
+    }
+    .session { min-width: 0; display: grid; justify-items: center; gap: 9px; }
+    .session-label { width: min(100%, 420px); display: flex; justify-content: space-between; gap: 12px; font-size: 13px; font-weight: 700; }
+    .session-label span:last-child { color: #716a62; font-weight: 500; }
+    .viewport {
+      position: relative;
+      width: min(100%, 420px);
+      aspect-ratio: 390 / 844;
+      overflow: hidden;
+      border: 1px solid #bdb6ae;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 12px 28px rgb(49 42 36 / 9%);
+    }
+    iframe { width: 100%; height: 100%; border: 0; background: #fff; }
+    .empty { position: absolute; inset: 0; display: grid; place-items: center; color: #80786f; font-size: 14px; }
+    .empty[hidden] { display: none; }
+    @media (max-width: 980px) {
+      header { align-items: stretch; flex-direction: column; }
+      form { width: 100%; }
+      main { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TRACE 三人实时界面</h1>
+    <form data-app-form>
+      <input data-app-url type="url" required aria-label="老师软件地址" placeholder="http://127.0.0.1:软件端口/">
+      <button type="submit">加载三屏</button>
+    </form>
+  </header>
+  <main>
+    <section class="session" data-session>
+      <div class="session-label"><span>Pebble 01</span><span>User 01</span></div>
+      <div class="viewport"><div class="empty" data-empty>等待软件地址</div><iframe hidden title="User 01 software"></iframe></div>
+    </section>
+    <section class="session" data-session>
+      <div class="session-label"><span>Pebble 02</span><span>User 02</span></div>
+      <div class="viewport"><div class="empty" data-empty>等待软件地址</div><iframe hidden title="User 02 software"></iframe></div>
+    </section>
+    <section class="session" data-session>
+      <div class="session-label"><span>Pebble 03</span><span>User 03</span></div>
+      <div class="viewport"><div class="empty" data-empty>等待软件地址</div><iframe hidden title="User 03 software"></iframe></div>
+    </section>
+  </main>
+  <script type="module" src="./software-stage.js"></script>
+</body>
+</html>

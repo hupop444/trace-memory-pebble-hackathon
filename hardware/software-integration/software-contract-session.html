@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACE 接口验收</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Inter, "Microsoft YaHei", sans-serif;
+      color: #2f2a26;
+      background: #f8f5f1;
+      letter-spacing: 0;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-width: 280px; min-height: 100vh; background: #f8f5f1; }
+    header { padding: 28px 24px 20px; border-bottom: 1px solid #ded7cf; }
+    .eyebrow { margin: 0 0 10px; color: #8b7d72; font-size: 12px; font-weight: 700; }
+    h1 { margin: 0; font: 600 34px/1.15 Georgia, "Microsoft YaHei", serif; }
+    .profile { margin: 9px 0 0; color: #776e66; font-size: 13px; overflow-wrap: anywhere; }
+    main { padding: 22px 24px 30px; }
+    .status { display: grid; gap: 8px; padding-bottom: 20px; border-bottom: 1px solid #ded7cf; font-size: 14px; }
+    [data-connection][data-online="true"] { color: #29764c; }
+    [data-connection][data-online="false"] { color: #a84b3b; }
+    .metric-primary { padding: 30px 0 24px; }
+    .metric-primary strong { display: block; font: 500 64px/1 Georgia, serif; }
+    .metric-primary span { color: #81776e; font-size: 13px; }
+    dl { display: grid; grid-template-columns: 1fr auto; gap: 12px 16px; margin: 0; padding: 20px 0; border-block: 1px solid #ded7cf; }
+    dt { color: #776e66; }
+    dd { margin: 0; font-weight: 700; }
+    .event { min-height: 76px; margin: 18px 0; padding: 12px; border: 1px solid #d4ccc4; background: #fff; overflow-wrap: anywhere; font: 12px/1.55 ui-monospace, Consolas, monospace; }
+    .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+    button { min-height: 44px; border: 1px solid #49413a; border-radius: 6px; background: #fff; color: inherit; font: inherit; cursor: pointer; }
+    button:first-child { background: #3b342e; color: #fff; }
+    .ack { min-height: 20px; margin: 14px 0 0; color: #776e66; font-size: 13px; }
+    .note { margin: 28px 0 0; color: #948980; font-size: 12px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">PROTOCOL ACCEPTANCE / TEMPORARY</p>
+    <h1>Pebble <span data-slot>--</span></h1>
+    <p class="profile" data-profile>trace-user</p>
+  </header>
+  <main>
+    <div class="status">
+      <strong data-connection data-online="false">正在连接网关</strong>
+      <span data-device>等待设备</span>
+    </div>
+    <div class="metric-primary">
+      <strong data-count>0</strong>
+      <span>本用户独立 Moment 数</span>
+    </div>
+    <dl>
+      <dt>压力</dt><dd data-pressure>--</dd>
+      <dt>持续时间</dt><dd data-duration>--</dd>
+      <dt>环境光</dt><dd data-light>--</dd>
+    </dl>
+    <div class="event" data-event>等待本设备输入</div>
+    <div class="actions">
+      <button type="button" data-simulate>测试输入</button>
+      <button type="button" data-replay>振动回放</button>
+      <button type="button" data-calibrate>重新校准</button>
+      <button type="button" data-clear>清空本用户</button>
+    </div>
+    <p class="ack" data-ack></p>
+    <p class="note">此页只用于老师软件接入前验证三设备、三用户隔离。正式展示时在上层三屏页输入老师软件地址。</p>
+  </main>
+  <script type="module" src="./software-contract-session.js"></script>
+</body>
+</html>

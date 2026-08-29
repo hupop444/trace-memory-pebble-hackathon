@@ -1,0 +1,374 @@
+{
+  "TRACE_badge_mini_back.stl": {
+    "triangles": 5524,
+    "components": 1,
+    "component_triangles": [
+      5524
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 8286
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -22.6436,
+        -35.6247,
+        -12.45
+      ],
+      "max": [
+        22.4611,
+        36.3533,
+        2.75
+      ],
+      "size": [
+        45.1047,
+        71.978,
+        15.2
+      ]
+    },
+    "signed_volume_mm3": 7941.288,
+    "file_bytes": 1084589
+  },
+  "TRACE_badge_mini_board.stl": {
+    "triangles": 12,
+    "components": 1,
+    "component_triangles": [
+      12
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 18
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -13.0,
+        -24.0,
+        -2.55
+      ],
+      "max": [
+        13.0,
+        12.0,
+        3.45
+      ],
+      "size": [
+        26.0,
+        36.0,
+        6.0
+      ]
+    },
+    "signed_volume_mm3": 5616.0,
+    "file_bytes": 1769
+  },
+  "TRACE_badge_mini_front.stl": {
+    "triangles": 4514,
+    "components": 1,
+    "component_triangles": [
+      4514
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 6771
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -22.6436,
+        -36.3568,
+        0.0
+      ],
+      "max": [
+        22.4611,
+        36.3533,
+        10.2738
+      ],
+      "size": [
+        45.1047,
+        72.7101,
+        10.2738
+      ]
+    },
+    "signed_volume_mm3": 5149.804,
+    "file_bytes": 878322
+  },
+  "TRACE_badge_mini_sensor.stl": {
+    "triangles": 448,
+    "components": 1,
+    "component_triangles": [
+      448
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 672
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -3.15,
+        -12.15,
+        6.9326
+      ],
+      "max": [
+        11.15,
+        2.15,
+        8.2826
+      ],
+      "size": [
+        14.3,
+        14.3,
+        1.35
+      ]
+    },
+    "signed_volume_mm3": 51.041,
+    "file_bytes": 83427
+  },
+  "TRACE_bag_esp32_back.stl": {
+    "triangles": 5436,
+    "components": 1,
+    "component_triangles": [
+      5436
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 8154
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -32.4887,
+        -41.801,
+        -19.15
+      ],
+      "max": [
+        32.2268,
+        42.2484,
+        2.75
+      ],
+      "size": [
+        64.7155,
+        84.0494,
+        21.9
+      ]
+    },
+    "signed_volume_mm3": 15237.888,
+    "file_bytes": 1070425
+  },
+  "TRACE_bag_esp32_board.stl": {
+    "triangles": 12,
+    "components": 1,
+    "component_triangles": [
+      12
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 18
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -14.0,
+        -31.2,
+        -3.55
+      ],
+      "max": [
+        14.0,
+        31.2,
+        6.45
+      ],
+      "size": [
+        28.0,
+        62.4,
+        10.0
+      ]
+    },
+    "signed_volume_mm3": 17472.0,
+    "file_bytes": 1841
+  },
+  "TRACE_bag_esp32_front.stl": {
+    "triangles": 4498,
+    "components": 1,
+    "component_triangles": [
+      4498
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 6747
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -32.4887,
+        -42.2525,
+        0.0
+      ],
+      "max": [
+        32.2268,
+        42.2484,
+        16.6338
+      ],
+      "size": [
+        64.7155,
+        84.5009,
+        16.6338
+      ]
+    },
+    "signed_volume_mm3": 10789.122,
+    "file_bytes": 875589
+  },
+  "TRACE_bag_esp32_sensor.stl": {
+    "triangles": 448,
+    "components": 1,
+    "component_triangles": [
+      448
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 672
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -2.15,
+        -13.15,
+        13.0866
+      ],
+      "max": [
+        14.15,
+        3.15,
+        14.4366
+      ],
+      "size": [
+        16.3,
+        16.3,
+        1.35
+      ]
+    },
+    "signed_volume_mm3": 58.659,
+    "file_bytes": 83461
+  },
+  "TRACE_clip_mini_back.stl": {
+    "triangles": 5678,
+    "components": 1,
+    "component_triangles": [
+      5678
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 8517
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -22.6436,
+        -33.6991,
+        -12.5
+      ],
+      "max": [
+        22.4611,
+        34.3882,
+        2.75
+      ],
+      "size": [
+        45.1047,
+        68.0873,
+        15.25
+      ]
+    },
+    "signed_volume_mm3": 7985.15,
+    "file_bytes": 1107366
+  },
+  "TRACE_clip_mini_board.stl": {
+    "triangles": 12,
+    "components": 1,
+    "component_triangles": [
+      12
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 18
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -13.0,
+        -23.0,
+        -2.55
+      ],
+      "max": [
+        13.0,
+        13.0,
+        3.45
+      ],
+      "size": [
+        26.0,
+        36.0,
+        6.0
+      ]
+    },
+    "signed_volume_mm3": 5616.0,
+    "file_bytes": 1769
+  },
+  "TRACE_clip_mini_front.stl": {
+    "triangles": 4516,
+    "components": 1,
+    "component_triangles": [
+      4516
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 6774
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -22.6436,
+        -34.3915,
+        0.0
+      ],
+      "max": [
+        22.4611,
+        34.3882,
+        10.2738
+      ],
+      "size": [
+        45.1047,
+        68.7797,
+        10.2738
+      ]
+    },
+    "signed_volume_mm3": 4904.348,
+    "file_bytes": 878829
+  },
+  "TRACE_clip_mini_sensor.stl": {
+    "triangles": 448,
+    "components": 1,
+    "component_triangles": [
+      448
+    ],
+    "watertight": true,
+    "edge_incidence_histogram": {
+      "2": 672
+    },
+    "degenerate_triangles": 0,
+    "bounds_mm": {
+      "min": [
+        -3.15,
+        -11.15,
+        6.9562
+      ],
+      "max": [
+        11.15,
+        3.15,
+        8.3061
+      ],
+      "size": [
+        14.3,
+        14.3,
+        1.35
+      ]
+    },
+    "signed_volume_mm3": 51.04,
+    "file_bytes": 83337
+  }
+}

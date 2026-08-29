@@ -1,0 +1,16 @@
+Item,References,Qty,Value / Part,Function,Package / Interface,Notes
+1,U1,1,ESP32-S3-DevKitC-1,MCU and USB power,Espressif DevKitC-1,Use official board pinout; GPIO4/5/6 are ADC1
+2,LS1,1,LDR / GL5528-class,Ambient light sensing,2-wire remote sensor,Characterize actual batch before final threshold lock
+3,FS1,1,Interlink FSR 402,Thin-film force input,2-wire remote sensor,14.68 mm active diameter
+4,PZ1,1,Passive piezo disc / film,Vibration and impact input,2-wire remote sensor,Do not connect directly to MCU GPIO
+5,J2 J3 J4,3,JST B2B-PH-K-S(LF)(SN),Locking sensor connectors,JST-PH 2.0 mm 2P,Use PHR-2 housings and color-coded leads
+6,R1,1,10 kΩ 1%,LDR divider pull-down,0603,Adjust only after light-range characterization
+7,R2 R4 R8,3,1 kΩ 1%,ADC isolation / RC filter,0603,Place close to ESP32 header or carrier PCB
+8,R3,1,22 kΩ 1%,FSR divider pull-down,0603,10-47 kΩ tuning range after force calibration
+9,R5,1,1 MΩ 1%,Piezo discharge path,0603,Across PIEZO_RAW to GND
+10,R6,1,47 kΩ 1%,Piezo transient current limiting,0603,Must precede rectifier/clamp network
+11,R7,1,470 kΩ 1%,Piezo envelope decay,0603,With C3 gives about 47 ms
+12,C1 C2 C4 C6,4,100 nF 10% X7R,ADC / rail filtering,0603,C1/C2/C4 at ADC pins; C6 at connector rail
+13,C3,1,100 nF 10% X7R,Piezo peak hold,0603,Envelope capacitor
+14,C5,1,10 uF 10% X5R,3V3 bulk decoupling,0805 or 1206,Near sensor connector bank
+15,D1 D2,2,BAT54H / BAT54,Schottky rectifier and 3V3 clamp,SOD-123 or SOD-323,D1 half-wave rectifier; D2 clamp to 3V3

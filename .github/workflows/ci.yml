@@ -1,0 +1,56 @@
+name: TRACE verification
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  software:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: software
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22.13.0
+          cache: npm
+          cache-dependency-path: software/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: npm run lint
+      - run: npm run build
+
+  hardware-contract:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hardware/bridge
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22.13.0
+          cache: npm
+          cache-dependency-path: hardware/bridge/package-lock.json
+      - run: npm ci --no-audit --no-fund
+      - run: node ../tools/test-software-contract.mjs
+
+  enclosure:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: hardware/enclosure
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - run: >-
+          python ../../tools/validate_trace_stl.py
+          --input-dir output
+          --pattern 'trace_*.stl'
+          --report ../../.tmp/trace-enclosure-validation.json
